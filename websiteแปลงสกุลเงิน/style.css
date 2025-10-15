@@ -1,0 +1,199 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #2ecc71;
+  --primary-dark: #27ae60;
+  --text: #2c3e50;
+  --text-light: #7f8c8d;
+  --bg: #f8fbff;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --border: #eef2f7;
+}
+
+body {
+  font-family: 'Sarabun', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa 0%, #f5f9ff 100%);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.layout {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 90vh;
+  max-height: 800px;
+}
+
+/* ด้านซ้าย: ข้อมูล */
+.info-section {
+  flex: 1;
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  color: white;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.info-content h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.features h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.features ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.features li {
+  margin-bottom: 14px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.footer-note {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-style: italic;
+  opacity: 0.85;
+}
+
+/* ด้านขวา: ตัวแปลง */
+.converter-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  background: var(--bg);
+}
+
+.converter-card {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.input-group {
+  display: flex;
+  gap: 12px;
+  background: white;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  margin-bottom: 20px;
+}
+
+.currency-select {
+  flex: 0 0 120px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237f8c8d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 16px;
+}
+
+.input-group input {
+  flex: 1;
+  border: none;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: right;
+  background: transparent;
+  outline: none;
+  min-width: 80px;
+}
+
+.swap-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid var(--border);
+  display: block;
+  margin: 20px auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.swap-btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  transform: rotate(180deg);
+}
+
+.swap-btn:hover svg {
+  stroke: white;
+}
+
+.rate-display {
+  text-align: center;
+  padding: 14px;
+  background: rgba(46, 204, 113, 0.1);
+  border-radius: 16px;
+  font-size: 16px;
+  color: var(--text);
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* Responsive: มือถือ */
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+    height: auto;
+    max-height: none;
+  }
+
+  .info-section, .converter-section {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .converter-card {
+    max-width: 100%;
+  }
+}

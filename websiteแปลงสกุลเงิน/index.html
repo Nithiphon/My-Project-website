@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Easy Rate – แปลงสกุลเงิน</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="layout">
+    <!-- ด้านซ้าย: ข้อมูลเว็บ -->
+    <div class="info-section">
+      <div class="info-content">
+        <h1>Easy Rate</h1>
+        <p class="subtitle">แปลงสกุลเงินแบบเรียลไทม์</p>
+        
+        <div class="features">
+          <h2>✨ ทำไมต้อง Easy Rate?</h2>
+          <ul>
+            <li>✅ ข้อมูลอัปเดตทุกชั่วโมงจากแหล่งเชื่อถือได้</li>
+            <li>🔄 สลับสกุลเงินได้ในคลิกเดียว</li>
+            <li>📱 ใช้งานได้ทุกอุปกรณ์ ทั้งมือถือและคอมพิวเตอร์</li>
+            <li>🔒 ไม่เก็บข้อมูลส่วนตัว — ใช้ได้ฟรี 100%</li>
+          </ul>
+        </div>
+
+        <div class="footer-note">
+          <p>เหมาะสำหรับนักเดินทาง นักเรียน หรือผู้ที่ทำธุรกรรมต่างประเทศ</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ด้านขวา: ตัวแปลงสกุลเงิน -->
+    <div class="converter-section">
+      <div class="converter-card">
+        <div class="input-group">
+          <select id="currency_one" class="currency-select"></select>
+          <input type="number" id="amount_one" value="1" min="0" step="any" placeholder="0.00">
+        </div>
+
+        <button class="swap-btn" id="btn" aria-label="สลับสกุลเงิน">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"/>
+          </svg>
+        </button>
+
+        <div class="input-group">
+          <select id="currency_two" class="currency-select"></select>
+          <input type="number" id="amount_two" value="0.00" min="0" step="any" placeholder="0.00">
+        </div>
+
+        <div class="rate-display" id="rate">กำลังโหลดอัตราแลกเปลี่ยน...</div>
+      </div>
+
+      <footer class="footer">
+        <p>ข้อมูลจาก ExchangeRate-API • อัปเดตทุกชั่วโมง</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="Script.js"></script>
+</body>
+</html>
